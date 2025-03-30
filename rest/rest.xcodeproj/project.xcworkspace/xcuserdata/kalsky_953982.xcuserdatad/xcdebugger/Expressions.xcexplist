@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #2 in closure #1 in closure #1 in closure #1 in NumberSense.body.getter:NumberSense.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in getNumber(line:canvasSize:):Matrix.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "line">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #8 in closure #1 in closure #1 in closure #1 in NumberSense.body.getter:NumberSense.swift">
+      </ContextState>
+      <ContextState
+         contextName = "getMatrix(line:canvasSize:):ContentView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "((matrixSize-1)/2 + width/2)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #7 in closure #1 in closure #1 in closure #1 in NumberSense.body.getter:NumberSense.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Array&lt;A&gt;.containsAny(other:):Matrix.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in closure #1 in NumberSense.body.getter:NumberSense.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #8 in closure #1 in closure #1 in closure #1 in NumberSense.body.getter:NumberSense.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #6 in closure #1 in closure #1 in closure #1 in NumberSense.body.getter:NumberSense.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #6 in closure #1 in closure #1 in closure #1 in NumberSense.body.getter:NumberSense.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lines.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #3 in closure #1 in closure #1 in closure #1 in NumberSense.body.getter:NumberSense.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #5 in closure #1 in closure #1 in closure #1 in NumberSense.body.getter:NumberSense.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

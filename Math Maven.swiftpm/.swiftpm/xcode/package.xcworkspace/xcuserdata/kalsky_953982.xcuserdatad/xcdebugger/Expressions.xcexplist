@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "getNumber(line:canvasSize:sample:):Matrix.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Bundle.main.paths(forResourcesOfType: &quot;mlmodelc&quot;, inDirectory: &quot;Resources2&quot;).first">
+            </PersistentString>
+            <PersistentString
+               value = "Bundle.module.url(forResource: &quot;Resources2/DigitClassifierV7&quot;, withExtension: &quot;mlmodelc&quot;)">
+            </PersistentString>
+            <PersistentString
+               value = "Bundle.main.resourcePath">
+            </PersistentString>
+            <PersistentString
+               value = "Bundle.main.path(forResource: &quot;aaa&quot;, ofType: &quot;txt&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
