@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		064E87DC2D9F25E800AE4AAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 064E87C32D9F25E500AE4AAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 064E87CA2D9F25E500AE4AAB;
+			remoteInfo = "Math Maven";
+		};
+		064E87E62D9F25E800AE4AAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 064E87C32D9F25E500AE4AAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 064E87CA2D9F25E500AE4AAB;
+			remoteInfo = "Math Maven";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		064E87CB2D9F25E500AE4AAB /* Math Maven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Math Maven.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		064E87DB2D9F25E800AE4AAB /* Math MavenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Math MavenTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		064E87E52D9F25E800AE4AAB /* Math MavenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Math MavenUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		064E87CD2D9F25E500AE4AAB /* Math Maven */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Math Maven";
+			sourceTree = "<group>";
+		};
+		064E87DE2D9F25E800AE4AAB /* Math MavenTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Math MavenTests";
+			sourceTree = "<group>";
+		};
+		064E87E82D9F25E800AE4AAB /* Math MavenUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Math MavenUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		064E87C82D9F25E500AE4AAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064E87D82D9F25E800AE4AAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064E87E22D9F25E800AE4AAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		064E87C22D9F25E500AE4AAB = {
+			isa = PBXGroup;
+			children = (
+				064E87CD2D9F25E500AE4AAB /* Math Maven */,
+				064E87DE2D9F25E800AE4AAB /* Math MavenTests */,
+				064E87E82D9F25E800AE4AAB /* Math MavenUITests */,
+				064E87CC2D9F25E500AE4AAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		064E87CC2D9F25E500AE4AAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				064E87CB2D9F25E500AE4AAB /* Math Maven.app */,
+				064E87DB2D9F25E800AE4AAB /* Math MavenTests.xctest */,
+				064E87E52D9F25E800AE4AAB /* Math MavenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		064E87CA2D9F25E500AE4AAB /* Math Maven */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064E87EF2D9F25E800AE4AAB /* Build configuration list for PBXNativeTarget "Math Maven" */;
+			buildPhases = (
+				064E87C72D9F25E500AE4AAB /* Sources */,
+				064E87C82D9F25E500AE4AAB /* Frameworks */,
+				064E87C92D9F25E500AE4AAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				064E87CD2D9F25E500AE4AAB /* Math Maven */,
+			);
+			name = "Math Maven";
+			packageProductDependencies = (
+			);
+			productName = "Math Maven";
+			productReference = 064E87CB2D9F25E500AE4AAB /* Math Maven.app */;
+			productType = "com.apple.product-type.application";
+		};
+		064E87DA2D9F25E800AE4AAB /* Math MavenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064E87F22D9F25E800AE4AAB /* Build configuration list for PBXNativeTarget "Math MavenTests" */;
+			buildPhases = (
+				064E87D72D9F25E800AE4AAB /* Sources */,
+				064E87D82D9F25E800AE4AAB /* Frameworks */,
+				064E87D92D9F25E800AE4AAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				064E87DD2D9F25E800AE4AAB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				064E87DE2D9F25E800AE4AAB /* Math MavenTests */,
+			);
+			name = "Math MavenTests";
+			packageProductDependencies = (
+			);
+			productName = "Math MavenTests";
+			productReference = 064E87DB2D9F25E800AE4AAB /* Math MavenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		064E87E42D9F25E800AE4AAB /* Math MavenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064E87F52D9F25E800AE4AAB /* Build configuration list for PBXNativeTarget "Math MavenUITests" */;
+			buildPhases = (
+				064E87E12D9F25E800AE4AAB /* Sources */,
+				064E87E22D9F25E800AE4AAB /* Frameworks */,
+				064E87E32D9F25E800AE4AAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				064E87E72D9F25E800AE4AAB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				064E87E82D9F25E800AE4AAB /* Math MavenUITests */,
+			);
+			name = "Math MavenUITests";
+			packageProductDependencies = (
+			);
+			productName = "Math MavenUITests";
+			productReference = 064E87E52D9F25E800AE4AAB /* Math MavenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		064E87C32D9F25E500AE4AAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					064E87CA2D9F25E500AE4AAB = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					064E87DA2D9F25E800AE4AAB = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 064E87CA2D9F25E500AE4AAB;
+					};
+					064E87E42D9F25E800AE4AAB = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 064E87CA2D9F25E500AE4AAB;
+					};
+				};
+			};
+			buildConfigurationList = 064E87C62D9F25E500AE4AAB /* Build configuration list for PBXProject "Math Maven" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 064E87C22D9F25E500AE4AAB;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 064E87CC2D9F25E500AE4AAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				064E87CA2D9F25E500AE4AAB /* Math Maven */,
+				064E87DA2D9F25E800AE4AAB /* Math MavenTests */,
+				064E87E42D9F25E800AE4AAB /* Math MavenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		064E87C92D9F25E500AE4AAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064E87D92D9F25E800AE4AAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064E87E32D9F25E800AE4AAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		064E87C72D9F25E500AE4AAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064E87D72D9F25E800AE4AAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064E87E12D9F25E800AE4AAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		064E87DD2D9F25E800AE4AAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 064E87CA2D9F25E500AE4AAB /* Math Maven */;
+			targetProxy = 064E87DC2D9F25E800AE4AAB /* PBXContainerItemProxy */;
+		};
+		064E87E72D9F25E800AE4AAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 064E87CA2D9F25E500AE4AAB /* Math Maven */;
+			targetProxy = 064E87E62D9F25E800AE4AAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		064E87ED2D9F25E800AE4AAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		064E87EE2D9F25E800AE4AAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		064E87F02D9F25E800AE4AAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Math Maven/Preview Content\"";
+				DEVELOPMENT_TEAM = G85D3VS6S4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-53982.Math-Maven";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		064E87F12D9F25E800AE4AAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Math Maven/Preview Content\"";
+				DEVELOPMENT_TEAM = G85D3VS6S4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-53982.Math-Maven";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		064E87F32D9F25E800AE4AAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G85D3VS6S4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-53982.Math-MavenTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Math Maven.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Math Maven";
+			};
+			name = Debug;
+		};
+		064E87F42D9F25E800AE4AAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G85D3VS6S4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-53982.Math-MavenTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Math Maven.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Math Maven";
+			};
+			name = Release;
+		};
+		064E87F62D9F25E800AE4AAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G85D3VS6S4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-53982.Math-MavenUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Math Maven";
+			};
+			name = Debug;
+		};
+		064E87F72D9F25E800AE4AAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G85D3VS6S4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-53982.Math-MavenUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Math Maven";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		064E87C62D9F25E500AE4AAB /* Build configuration list for PBXProject "Math Maven" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064E87ED2D9F25E800AE4AAB /* Debug */,
+				064E87EE2D9F25E800AE4AAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		064E87EF2D9F25E800AE4AAB /* Build configuration list for PBXNativeTarget "Math Maven" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064E87F02D9F25E800AE4AAB /* Debug */,
+				064E87F12D9F25E800AE4AAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		064E87F22D9F25E800AE4AAB /* Build configuration list for PBXNativeTarget "Math MavenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064E87F32D9F25E800AE4AAB /* Debug */,
+				064E87F42D9F25E800AE4AAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		064E87F52D9F25E800AE4AAB /* Build configuration list for PBXNativeTarget "Math MavenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064E87F62D9F25E800AE4AAB /* Debug */,
+				064E87F72D9F25E800AE4AAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 064E87C32D9F25E500AE4AAB /* Project object */;
+}
