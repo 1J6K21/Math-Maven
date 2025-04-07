@@ -32,7 +32,7 @@ struct NumberSense: View {
     let stopwatch = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @AppStorage("Sampling") var collectData: Bool = true
     @AppStorage("demoCompleted") var demoCompleted = false
-    private let questionFuncs = [IntegerSimplification, RemainderQuestion, RomanNumerals, TwoXtwo, OneHundreds, Squares, Cubes, DifferenceOfSquaresEndingIn5, AboveAndUnder50Squared, LCM, GCD]
+    private let questionFuncs = [IntegerSimplification, RemainderQuestion, RomanNumerals, TwoXtwo, OneHundreds, Squares, Cubes, DifferenceOfSquaresEndingIn5, AboveAndUnder50Squared, LCM, GCD, TriangularNumbers, TwoByTwoMultiplication, ImproperFractionMultiplication, IntegerSequenceSum, RootApproximation]
     var body: some View{
         NavigationStack{
             ZStack(alignment: .center){
@@ -266,7 +266,7 @@ struct NumberSense: View {
                             HStack{
                                 Button{
                                     withAnimation{
-                                        if work.count > 0 {
+                                        if work.count > 0 && work.count < String(answer).count{
                                             work += String(work.last!)
                                         }
                                     }

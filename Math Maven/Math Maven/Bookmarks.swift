@@ -164,6 +164,16 @@ public func getStrategy(id: Int) -> (String, UIImage){
         return("LCM", UIImage(resource: .LCM))
     case 11:
         return("GCD", UIImage(resource: .GCD))
+    case 12:
+        return("Triangular Numbers", UIImage(resource: .squares))
+    case 13:
+        return("Two by Two Multiplication", UIImage(resource: .twoXTwos))
+    case 14:
+        return("Improper Fraction Multiplication", UIImage(resource: .nearHundred))
+    case 15:
+        return("Integer Sequence Sum", UIImage(resource: .squares))
+    case 16:
+        return("Root Approximation", UIImage(resource: .squares))
     default:
         return("", UIImage())
     }

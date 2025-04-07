@@ -83,82 +83,134 @@ func RemainderQuestion() -> (String, Int, UIImage, Int){
 //Convert a Roman Numeral Equation into an arabic numeral answer
 func RomanNumerals()->(String, Int, UIImage, Int){
     let ROMAN_NUMERALS = ["I", "V", "X", "L", "C", "D", "M"]
-    let Index_Value = [0,5,2,5,2,5,2]
-    let num1Arabic = Int.random(in: -3999..<4000)
-    let num2Arabic = Int.random(in: -3999..<4000)
-    let answerArabic = num1Arabic+num2Arabic
-    var question = ""
-    var romanNumeralStack1: [Int] = []
-    var romanNumeralStack2: [Int] = []
+    let VALUES = [1, 5, 10, 50, 100, 500, 1000]
     
-    var num1IntTemp = abs(num1Arabic)
-    var num2IntTemp = abs(num2Arabic)
+    // Generate random numbers
+    var num1Arabic = Int.random(in: -3999..<4000)
+    var num2Arabic = Int.random(in: -3999..<4000)
+    var answerArabic = num1Arabic + num2Arabic
     
-    //1000
-    romanNumeralStack1.insert((num1IntTemp/1000), at: 0)
-    romanNumeralStack2.insert((num2IntTemp/1000), at: 0)
-    num1IntTemp %= 1000
-    num2IntTemp %= 1000
+    // Maximum attempts to avoid infinite recursion
+    let maxAttempts = 10
+    var attempts = 0
     
+    func convertToRoman(_ num: Int) -> String {
+        var n = abs(num)
+        var result = ""
+        
+        // Handle thousands
+        while n >= 1000 {
+            result += "M"
+            n -= 1000
+        }
+        
+        // Handle hundreds
+        if n >= 900 {
+            result += "CM"
+            n -= 900
+        } else if n >= 500 {
+            result += "D"
+            n -= 500
+        } else if n >= 400 {
+            result += "CD"
+            n -= 400
+        }
+        while n >= 100 {
+            result += "C"
+            n -= 100
+        }
+        
+        // Handle tens
+        if n >= 90 {
+            result += "XC"
+            n -= 90
+        } else if n >= 50 {
+            result += "L"
+            n -= 50
+        } else if n >= 40 {
+            result += "XL"
+            n -= 40
+        }
+        while n >= 10 {
+            result += "X"
+            n -= 10
+        }
+        
+        // Handle ones
+        if n >= 9 {
+            result += "IX"
+            n -= 9
+        } else if n >= 5 {
+            result += "V"
+            n -= 5
+        } else if n >= 4 {
+            result += "IV"
+            n -= 4
+        }
+        while n > 0 {
+            result += "I"
+            n -= 1
+        }
+        
+        return result
+    }
     
-    //500
-    romanNumeralStack1.insert((num1IntTemp/500), at: 0)
-    romanNumeralStack2.insert((num2IntTemp/500), at: 0)
-    num1IntTemp %= 500
-    num2IntTemp %= 500
+    func isValidRomanNumeral(_ roman: String) -> Bool {
+        // Check for invalid combinations
+        let invalidCombinations = [
+            "IIII", "VV", "XXXX", "LL", "CCCC", "DD", "MMMM",
+            "IL", "IC", "ID", "IM", "VL", "VC", "VD", "VM",
+            "XD", "XM", "LD", "LM", "DM"
+        ]
+        
+        for invalid in invalidCombinations {
+            if roman.contains(invalid) {
+                return false
+            }
+        }
+        
+        // Check for proper subtractive notation
+        // Only I can be used before V and X
+        // Only X can be used before L and C
+        // Only C can be used before D and M
+        let validSubtractive = [
+            "IV", "IX", "XL", "XC", "CD", "CM"
+        ]
+        
+        // Count occurrences of each valid subtractive combination
+        for subtractive in validSubtractive {
+            let count = roman.components(separatedBy: subtractive).count - 1
+            if count > 1 {
+                return false // Each subtractive combination should appear at most once
+            }
+        }
+        
+        return true
+    }
     
-    // 100
-    romanNumeralStack1.insert((num1IntTemp/100), at: 0)
-    romanNumeralStack2.insert((num2IntTemp/100), at: 0)
-    num1IntTemp %= 100
-    num2IntTemp %= 100
-    
-    //50
-    romanNumeralStack1.insert((num1IntTemp/50), at: 0)
-    romanNumeralStack2.insert((num2IntTemp/50), at: 0)
-    num1IntTemp %= 50
-    num2IntTemp %= 50
-    
-    //10
-    romanNumeralStack1.insert((num1IntTemp/10), at: 0)
-    romanNumeralStack2.insert((num2IntTemp/10), at: 0)
-    num1IntTemp %= 10
-    num2IntTemp %= 10
-    
-    //5
-    romanNumeralStack1.insert((num1IntTemp/5), at: 0)
-    romanNumeralStack2.insert((num2IntTemp/5), at: 0)
-    num1IntTemp %= 5
-    num2IntTemp %= 5
-    
-    //1
-    romanNumeralStack1.insert((num1IntTemp), at: 0)
-    romanNumeralStack2.insert((num2IntTemp), at: 0)
-    
+    // Generate valid Roman numerals
     var question1 = ""
     var question2 = ""
-    for i in 0...6 {
-        if romanNumeralStack1[i] > 3 {
-            question1 += String(repeating: ROMAN_NUMERALS[i], count: Index_Value[i+1] - romanNumeralStack1[i]) + ROMAN_NUMERALS[i+1]
-        }else{
-            question1 += String(repeating: ROMAN_NUMERALS[i], count: romanNumeralStack1[i])
-        }
-        
-        if romanNumeralStack2[i] > 3 {
-            question2 += String(repeating: ROMAN_NUMERALS[i], count: Index_Value[i+1] - romanNumeralStack2[i]) + ROMAN_NUMERALS[i+1]
-        }else{
-            question2 += String(repeating: ROMAN_NUMERALS[i], count: romanNumeralStack2[i])
-        }
-        
+    
+    repeat {
+        question1 = convertToRoman(num1Arabic)
+        attempts += 1
+    } while !isValidRomanNumeral(question1) && attempts < maxAttempts
+    
+    attempts = 0
+    repeat {
+        question2 = convertToRoman(num2Arabic)
+        attempts += 1
+    } while !isValidRomanNumeral(question2) && attempts < maxAttempts
+    
+    // If we couldn't generate valid Roman numerals after max attempts, try with new random numbers
+    if !isValidRomanNumeral(question1) || !isValidRomanNumeral(question2) {
+        return RomanNumerals() // Recursive call with new random numbers
     }
-    question1 = String(question1.reversed())
-    question2 = String(question2.reversed())
     
-    question = "In Arabic Numerals: " + ((num1Arabic<0) ? "-" : "") + question1 + " + " + ((num2Arabic<0) ? "-" : "") + question2 + " = "
-    
+    let question = "In Arabic Numerals: " + ((num1Arabic<0) ? "-" : "") + question1 + " + " + ((num2Arabic<0) ? "-" : "") + question2 + " = "
     
     return (question, answerArabic, UIImage(resource: .romanNumerals), 3)
-    
 }
 
 //Problem 4
@@ -258,8 +310,9 @@ func LCM()->(String, Int, UIImage, Int){
 
 //Problem 11
 func GCD()->(String, Int, UIImage, Int){
-    let a = Int.random(in: 11...25) * Int.random(in: 1...4)
-    let b = a*Int.random(in: 10...25)
+    let start = Int.random(in: 11...25)
+    let a = start * Int.random(in: 2...9)
+    let b = start*Int.random(in: 5...15)
     var answer = 0
     
     if a > b {
@@ -281,5 +334,87 @@ func GCD(bigger: Int, lower: Int) -> Int{
     }else{
         return lower
     }
+}
+
+//Problem 12
+func TriangularNumbers()->(String, Int, UIImage, Int){
+    let n = Int.random(in: 1...6)
+    let answer = (n * (n + 1)) / 2
+    let question = "Find the \(n)th triangular number"
+    
+    return (question, answer, UIImage(resource: .squares), 12)
+}
+
+//Problem 13
+func TwoByTwoMultiplication()->(String, Int, UIImage, Int){
+    let num1 = Int.random(in: 11...99)
+    let num2 = Int.random(in: 11...99)
+    let answer = num1 * num2
+    let question = "\(num1) × \(num2) = "
+    
+    return (question, answer, UIImage(resource: .twoXTwos), 13)
+}
+
+//Problem 14
+func ImproperFractionMultiplication()->(String, Int, UIImage, Int){
+    let num1 = Int.random(in: 2...39)
+    let den1 = Int.random(in: 2...39)
+    let num2 = Int.random(in: 2...39)
+    let den2 = Int.random(in: 2...39)
+    
+    // Ensure at least one fraction is improper
+    while (Double(num1)/Double(den1) <= 1 && Double(num2)/Double(den2) <= 1) {
+        let num1 = Int.random(in: 2...39)
+        let den1 = Int.random(in: 2...39)
+        let num2 = Int.random(in: 2...39)
+        let den2 = Int.random(in: 2...39)
+    }
+    
+    let answer = (num1 * num2) / (den1 * den2)
+    let question = "\(num1)/\(den1) × \(num2)/\(den2) = "
+    
+    return (question, answer, UIImage(resource: .nearHundred), 14)
+}
+
+//Problem 15
+func IntegerSequenceSum()->(String, Int, UIImage, Int){
+    let sequenceType = Int.random(in: 0...2) // 0: consecutive, 1: odd, 2: even
+    let start = Int.random(in: 1...20)
+    let count = 5
+    
+    var sequence: [Int] = []
+    var sum = 0
+    
+    switch sequenceType {
+    case 0: // consecutive
+        sequence = Array(start...(start + count - 1))
+    case 1: // odd
+        let firstOdd = start % 2 == 0 ? start + 1 : start
+        sequence = stride(from: firstOdd, through: firstOdd + (count-1)*2, by: 2).map { $0 }
+    case 2: // even
+        let firstEven = start % 2 == 0 ? start : start + 1
+        sequence = stride(from: firstEven, through: firstEven + (count-1)*2, by: 2).map { $0 }
+    default:
+        break
+    }
+    
+    sum = sequence.reduce(0, +)
+    
+    let sequenceStr = sequence.map { String($0) }.joined(separator: ", ")
+    let question = "Find the sum: \(sequenceStr)"
+    
+    return (question, sum, UIImage(resource: .squares), 15)
+}
+
+//Problem 16
+func RootApproximation()->(String, Int, UIImage, Int){
+    let isSquareRoot = Bool.random()
+    let num = Int.random(in: 1000...9999999)
+    let actualRoot = isSquareRoot ? Int(sqrt(Double(num))) : Int(pow(Double(num), 1.0/3.0))
+    let answer = actualRoot
+    
+    let question = "Approximate the \(isSquareRoot ? "square" : "cube") root of \(num) (within 5%)"
+    
+    return (question, answer, UIImage(resource: .squares), 16)
 }
 
