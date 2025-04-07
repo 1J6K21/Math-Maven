@@ -7,6 +7,7 @@
 
 
 import SwiftUI
+import GoogleMobileAds
 
 struct NumberSense: View {
     
@@ -33,6 +34,12 @@ struct NumberSense: View {
     @AppStorage("Sampling") var collectData: Bool = true
     @AppStorage("demoCompleted") var demoCompleted = false
     private let questionFuncs = [IntegerSimplification, RemainderQuestion, RomanNumerals, TwoXtwo, OneHundreds, Squares, Cubes, DifferenceOfSquaresEndingIn5, AboveAndUnder50Squared, LCM, GCD]
+    
+    // Update banner ad state
+    @State private var bannerAd: BannerView?
+    
+    @ObservedObject private var adSettings = AdSettings.shared
+    
     var body: some View{
         NavigationStack{
             ZStack(alignment: .center){
@@ -66,13 +73,19 @@ struct NumberSense: View {
                         }
                         .padding()
                         
-                        Button{
-                            showInfo = true
+                        // Add Settings Menu
+                        Menu {
+                            AdSettingsView()
+                            Button {
+                                showInfo = true
+                            } label: {
+                                Label("Info", systemImage: "info.circle")
+                            }
                         } label: {
-                            Image(systemName: "info.circle")
-                        }.disabled(showInfo).padding()
-                        
-                        
+                            Image(systemName: "gearshape.fill")
+                        }
+                        .disabled(showInfo)
+                        .padding()
                         
                     }.padding()
                     
@@ -353,6 +366,12 @@ struct NumberSense: View {
                         }
                 }
                 
+                // Conditionally show banner ad
+                if adSettings.adsEnabled {
+                    BannerAdView()
+                        .frame(height: 50)
+                        .padding(.bottom)
+                }
             }
             .accentColor(Color(UIColor(resource: .CS_6)))
         }

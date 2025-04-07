@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0659B06C2DA4537F0038A31A /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 0659B06B2DA4537F0038A31A /* GoogleMobileAds */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		064E87DC2D9F25E800AE4AAB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0659B06C2DA4537F0038A31A /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = "Math Maven";
 			packageProductDependencies = (
+				0659B06B2DA4537F0038A31A /* GoogleMobileAds */,
 			);
 			productName = "Math Maven";
 			productReference = 064E87CB2D9F25E500AE4AAB /* Math Maven.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = 064E87C22D9F25E500AE4AAB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0659B06A2DA4537F0038A31A /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 064E87CC2D9F25E500AE4AAB /* Products */;
 			projectDirPath = "";
@@ -558,6 +567,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0659B06A2DA4537F0038A31A /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0659B06B2DA4537F0038A31A /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0659B06A2DA4537F0038A31A /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 064E87C32D9F25E500AE4AAB /* Project object */;
 }
