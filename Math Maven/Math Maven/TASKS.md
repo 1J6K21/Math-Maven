@@ -1,6 +1,9 @@
 # Math Maven Task List
 
 ## To Do
+- [ ] 
+- [ ] problems of unit conversion
+- [x] Add lesson images and put them in the book
 - [x] Add proper validation for Roman numeral input
 - [x] Add error handling for invalid Roman numeral combinations
 - [ ] Add tests to verify the Roman numeral fixes
@@ -21,4 +24,13 @@
 - [x] Added validation for Roman numeral combinations
   - [x] Implemented checks for invalid combinations (IIII, VV, etc.)
   - [x] Added validation for proper subtractive notation
-  - [x] Implemented error handling with recursive recall for invalid combinations 
+  - [x] Implemented error handling with recursive recall for invalid combinations
+- [x] Created lesson images for problem types
+  - [x] Roman Numerals lesson image
+  - [x] Triangular Numbers lesson image
+  - [x] Two by Two Multiplication lesson image
+  - [x] Improper Fraction Multiplication lesson image
+  - [x] Integer Sequence Sum lesson image
+  - [x] Root Approximation lesson image
+  - [x] Created image generator script
+  - [x] Added README with instructions

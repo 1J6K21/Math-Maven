@@ -49,6 +49,7 @@ struct NumberSense: View {
                         Button{
                             questionNum = 1
                             correctCount = 0
+                            generateAllLessonImages()
                         } label: {
                             Image(systemName: "slider.horizontal.2.rectangle.and.arrow.triangle.2.circlepath")
                         }.disabled(showInfo).padding()

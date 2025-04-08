@@ -338,7 +338,7 @@ func GCD(bigger: Int, lower: Int) -> Int{
 
 //Problem 12
 func TriangularNumbers()->(String, Int, UIImage, Int){
-    let n = Int.random(in: 1...6)
+    let n = Int.random(in: 1...7)
     let answer = (n * (n + 1)) / 2
     let question = "Find the \(n)th triangular number"
     
@@ -358,20 +358,11 @@ func TwoByTwoMultiplication()->(String, Int, UIImage, Int){
 //Problem 14
 func ImproperFractionMultiplication()->(String, Int, UIImage, Int){
     let num1 = Int.random(in: 2...39)
-    let den1 = Int.random(in: 2...39)
     let num2 = Int.random(in: 2...39)
     let den2 = Int.random(in: 2...39)
     
-    // Ensure at least one fraction is improper
-    while (Double(num1)/Double(den1) <= 1 && Double(num2)/Double(den2) <= 1) {
-        let num1 = Int.random(in: 2...39)
-        let den1 = Int.random(in: 2...39)
-        let num2 = Int.random(in: 2...39)
-        let den2 = Int.random(in: 2...39)
-    }
-    
-    let answer = (num1 * num2) / (den1 * den2)
-    let question = "\(num1)/\(den1) × \(num2)/\(den2) = "
+    let answer = (num1 * num2) / (den2)
+    let question = "\(num1) × \(num2)/\(den2) = "
     
     return (question, answer, UIImage(resource: .nearHundred), 14)
 }
@@ -407,6 +398,7 @@ func IntegerSequenceSum()->(String, Int, UIImage, Int){
 }
 
 //Problem 16
+//change this to actually let the answer be within 5%
 func RootApproximation()->(String, Int, UIImage, Int){
     let isSquareRoot = Bool.random()
     let num = Int.random(in: 1000...9999999)
