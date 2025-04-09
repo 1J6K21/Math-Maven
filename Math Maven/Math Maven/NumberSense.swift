@@ -323,11 +323,27 @@ struct NumberSense: View {
                         
                         Button{
                             withAnimation{
-                                if answer == ((positive ? 1 : -1) * (Int(work) ?? 0)){
-                                    answeredRight = true
-                                    correctCount += 1
-                                }else{
-                                    answeredWrong = true
+                                let userAnswer = (positive ? 1 : -1) * (Int(work) ?? 0) // Calculate user's answer once
+                                
+                                // Special check for Root Approximation (ID 16)
+                                if questionID == 16 {
+                                    // Calculate 5% tolerance
+                                    let tolerance = abs(Double(answer) * 0.05)
+                                    // Check if the user's answer is within the tolerance range
+                                    if abs(Double(userAnswer) - Double(answer)) <= tolerance { 
+                                        answeredRight = true
+                                        correctCount += 1
+                                    } else {
+                                        answeredWrong = true
+                                    }
+                                } else {
+                                    // Standard exact check for other questions
+                                    if answer == userAnswer {
+                                        answeredRight = true
+                                        correctCount += 1
+                                    } else {
+                                        answeredWrong = true
+                                    }
                                 }
                             }
                         }label: {
