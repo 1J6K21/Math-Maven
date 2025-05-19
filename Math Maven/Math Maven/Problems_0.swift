@@ -1,18 +1,30 @@
-/*
-//
-//  Problems.swift
-//  rest
-//
-//  Created by kalsky_953982 on 2/12/25.
-//
 import Swift
 import Foundation
 import SwiftUI
 
+// Add at the top of the file, after imports
+enum AnswerType {
+    case integer(Int)
+    case decimal(Double, Int) // value and decimal places
+    case fraction(Int, Int) // numerator and denominator
+    case mixedNumber(Int, Int, Int) // whole number, numerator, denominator
+    case percent(Double) // percentage value
+    case money(Double) // monetary value
+    case improperFraction(Int, Int) // numerator and denominator (numerator > denominator)
+    case approximation(Double, Double) // exact value and tolerance percentage
+    case complex(Int, Int) // real and imaginary parts
+}
+
+//MARK: Instructions
+// All functions are guaranteed to return (Question String, AnswerType wrapper of answer, help Image, and digit count
+//If answer type is mixed number, include a placeholder for the whole number, the numerators, and the denominators, include a fraction sign
+//If the answer is money add a placeholder for numbers and a decimal, include a dollar sign and decimal point
+// vice versa
+
 //Problem 1
 ///this is always an addition/subtraction string of numbers 2-4 digits
 ///returns (problem string, answer int, help image, questionID)
-func IntegerSimplification()-> (String, Int, UIImage, Int){
+func IntegerSimplification()-> (String, AnswerType, UIImage, Int){
     let asset = UIImage(resource: .intSimplification)
     var answer = 0
     var num1 = 0
@@ -54,11 +66,31 @@ func IntegerSimplification()-> (String, Int, UIImage, Int){
 
     answer = num1 + num2 + num3
     let answerString = String(format: "%d %+d %+d = ", num1, num2, num3)
-    
-    
-    
-    return (answerString, answer, asset, 1)
+ 
+    return (answerString, .integer(answer), asset, String(abs(answer)).count)
 }
+
+//Problem 2 Common Factors
+
+func CommonFactors()->(String, Int, UIImage, Int){
+    
+    let a  = Int.random(in: 11...99)
+    let b  = Int.random(in: 11...99)
+    let c  = Int.random(in: 11...99)
+    let bool = Bool.random()
+    
+    var question = ""
+    if(bool){
+        question = "\(a) x \(c) + \(b) x \(c)"
+    }else{
+        question = "\(a) x \(c) + \(c) x \(b)"
+    }
+    
+    let answer = c * (a+b)
+    let asset = UIImage(resource: .intSimplification)
+    let placeholders = 
+}
+
 
 //Problem 2
 //Remainder
